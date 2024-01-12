@@ -16,7 +16,7 @@ namespace AulaPraticaWeb_08_01_2024.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.data = $"Bem vindo {DateTime.Now.Year}";
+            ViewBag.data = $"Bem vindo {DateTime.Now.Year}.";
             ViewBag.res = Divi2Numeros(100,5);
             return View();
         }
