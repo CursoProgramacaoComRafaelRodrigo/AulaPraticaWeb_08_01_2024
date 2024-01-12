@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "While";
+}
+<div class="alert alert-secondary">
+    <h1>Usando o While</h1>
+</div>
+
+@{
+    int x = 1;
+    while (x <= 10)
+    {
+        <p>@x</p>
+        x++;
+    }
+}

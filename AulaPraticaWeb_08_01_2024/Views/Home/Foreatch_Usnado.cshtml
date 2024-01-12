@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Foreatch";
+}
+
+<div class="alert alert-success">
+    <h1>Usando foreach</h1>
+    <h1>@ViewBag.e</h1>
+</div>
+
+@{
+    string[] Nomes = new string[]
+    {
+      "Pedro","Pedra","Petra","Pão","Sei lá!"
+    };
+
+    foreach (var nome in Nomes)
+    {
+        <p>@nome</p>
+    }
+}
+

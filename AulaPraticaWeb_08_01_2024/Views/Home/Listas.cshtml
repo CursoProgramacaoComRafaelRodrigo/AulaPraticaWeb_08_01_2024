@@ -1,0 +1,28 @@
+@{
+   ViewData["Title"]="Lista";
+   int contador = 0;
+   List<string> Nomes = new List<string>();
+   Nomes.Add("Pedro");
+   Nomes.Add("Pedra");
+   Nomes.Add("Petra");
+   Nomes.AddRange(new string[]
+   {
+      "Maura","Paulo","Marcelo","João"
+   });
+   contador = Nomes.Count;
+}
+
+<div class="alert alert-warning">
+   <h1>Trabalhando com listas!</h1>
+    <p>Total da lista: @contador</p>
+    <p>Total da mutiplicação: @ViewBag.ok</p>
+</div>
+
+@{
+   
+   foreach (var nome in Nomes)
+   {
+     <p>@nome</p>
+   }
+  
+}

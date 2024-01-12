@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "For";
+}
+<div class="alert alert-primary">
+    <h1 class="text-center">Usando o For</h1>
+</div>
+
+@{
+    for (int x = 1; x <= 10; x++)
+    {
+        <p class="text-center">@x</p>
+    }
+}

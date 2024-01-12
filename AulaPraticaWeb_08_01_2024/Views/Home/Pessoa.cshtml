@@ -1,0 +1,22 @@
+@model Pessoa
+@{
+ ViewData["Title"] = "Pessoa";
+}
+<div class="alert alert-heading">
+ <h1>Dados Pessoa</h1>
+</div>
+
+<div class="alert alert-light">
+ <p>Nome: @Model.Nome</p>
+ <p>Sobrenome: @Model.Sobrenome</p>
+ <p>Idade: @Model.Idade</p>
+ <p>Cor de olhos: @Model.CorOlhos</p>
+ <p>Cor de pele: @Model.CorPele</p>
+</div>
+<div class="alert alert-dark">
+ <p>@Model.Andar()</p>
+ <p>@Model.Parar()</p>
+ <p>@Model.Comer()</p>
+ <p>@Model.ToString()</p>
+ <p>@Model.Andar(100)</p>
+</div>
