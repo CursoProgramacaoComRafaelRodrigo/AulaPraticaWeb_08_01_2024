@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Botões";
+}
+
+<form method="post">
+    <input type="text" name="texto" class="form-control-sm"/>
+    <button class="btn btn-primary" name="btnOk" type="submit" id="btnOK">
+        Clica
+    </button>
+
+    <button class="btn alert-secondary" name="btnOk" type="submit" id="btnOK">
+        Clica
+    </button>
+
+    <input class="btn btn-danger" value="Houve um erro" type="submit" />
+    <input class="btn btn-success" value="Success" type="submit" />
+    <input class="btn btn-info" value="Mensagem de alerta" onclick="Clica()" type="submit" />
+</form>
+<p style="font-size:50px">@ViewBag.res</p>
+<script type="text/javascript">
+    function Clica(){
+        alert('Voce clicou!');
+    }
+</script>

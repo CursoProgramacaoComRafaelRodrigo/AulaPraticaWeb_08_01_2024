@@ -17,7 +17,7 @@ namespace AulaPraticaWeb_08_01_2024.Controllers
         public IActionResult Index()
         {
             ViewBag.data = $"Bem vindo {DateTime.Now.Year}.";
-            ViewBag.res = Divi2Numeros(100,5);
+            ViewBag.res = Divi2Numeros(100, 5);
             return View();
         }
 
@@ -28,7 +28,12 @@ namespace AulaPraticaWeb_08_01_2024.Controllers
         }
         public IActionResult Listas()
         {
-            ViewBag.ok = Multiplica2Numeros(30, 8).ToString("N2",CultureInfo.CurrentCulture);
+            ViewBag.ok = Multiplica2Numeros(30, 8).ToString("N2", CultureInfo.CurrentCulture);
+            return View();
+        }
+
+        public IActionResult Tabelas()
+        {
             return View();
         }
         public IActionResult While_Enquanto()
@@ -44,16 +49,27 @@ namespace AulaPraticaWeb_08_01_2024.Controllers
             Soma2Numeros();
             return View();
         }
+        [BindProperty]
+        public string texto { get; set; }
+        public IActionResult Botoes()
+        {
+            ViewBag.res = texto;
+            return View();
+        }
+        public IActionResult Cartao()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
         }
 
-        private int Divi2Numeros(int n1,int n2)
+        private int Divi2Numeros(int n1, int n2)
         {
             return n1 / n2;
-        } 
-        private decimal Multiplica2Numeros(decimal n1,decimal n2)
+        }
+        private decimal Multiplica2Numeros(decimal n1, decimal n2)
         {
             return n1 * n2;
         }
