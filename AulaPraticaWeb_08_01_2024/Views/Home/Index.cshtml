@@ -10,25 +10,27 @@
 
 @{
     DateTime dia = DateTime.Now;
-    CultureInfo idioma = new CultureInfo("en-US");
-    <select style="font-size:48px" class="text-center">
-        @for (int i = 1; i <= 7; i++)
-        {
-            switch (i)
+    CultureInfo idioma = new CultureInfo("pt-PT");
+    <div class="text-center">
+        <select style="font-size:48px">
+            @for (int i = 1; i <= 7; i++)
             {
-                case 1:
-                    <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
-                    break;
-                case 2:
-                    <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
-                    break;
-                case 3:
-                    <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
-                    break;
-                case 7:
-                    <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
-                    break;
+                switch (i)
+                {
+                    case 1:
+                        <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
+                        break;
+                    case 2:
+                        <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
+                        break;
+                    case 3:
+                        <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
+                        break;
+                    case 7:
+                        <option>@DateTime.Now.AddDays(i - 1).ToString("D", idioma)</option>
+                        break;
+                }
             }
-        }
-    </select>
+        </select>
+    </div>
 }
